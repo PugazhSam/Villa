@@ -1,0 +1,205 @@
+@charset "ISO-8859-1";
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+html {
+  display: table;
+}
+body {
+background: rgb(255,255,255);
+background: linear-gradient(114deg, rgba(255,255,255,1) 68%, rgba(14,112,140,0.9808298319327731) 90%);
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+
+[type=button],[type=submit] {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+    outline: none;
+    background: transparent;
+    cursor: pointer
+}
+
+[type=button][layout=default],[type=submit][layout=default] {
+    font-family: Arial,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.1428571429rem;
+    line-height: 52px;
+    letter-spacing: 0;
+    text-transform: none;
+    text-decoration: none;
+    color: rgb(9,96,121);
+    position: relative;
+    height: 50px;
+    z-index: 1
+}
+
+[type=button][layout=default] .svg,[type=submit][layout=default] .svg {
+    float: right;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 20px;
+    -webkit-transition: -webkit-transform .2s cubic-bezier(.165,.84,.44,1);
+    transition: -webkit-transform .2s cubic-bezier(.165,.84,.44,1);
+    transition: transform .2s cubic-bezier(.165,.84,.44,1);
+    transition: transform .2s cubic-bezier(.165,.84,.44,1),-webkit-transform .2s cubic-bezier(.165,.84,.44,1)
+}
+
+[type=button][layout=default] .svg svg,[type=submit][layout=default] .svg svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    fill: #2b0059;
+    -webkit-transition: fill .2s cubic-bezier(.165,.84,.44,1);
+    transition: fill .2s cubic-bezier(.165,.84,.44,1)
+}
+
+[type=button][layout=default] .caption,[type=submit][layout=default] .caption {
+    display: block;
+    height: 100%;
+    background: #ffffff;
+    padding-right: 30px;
+    padding-left: 40px;
+    -webkit-transition: -webkit-filter .2s cubic-bezier(.25,.46,.45,.94);
+    transition: -webkit-filter .2s cubic-bezier(.25,.46,.45,.94);
+    transition: filter .2s cubic-bezier(.25,.46,.45,.94);
+    transition: filter .2s cubic-bezier(.25,.46,.45,.94),-webkit-filter .2s cubic-bezier(.25,.46,.45,.94)
+}
+
+[type=button][layout=default]:after,[type=button][layout=default]:before,[type=submit][layout=default]:after,[type=submit][layout=default]:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%
+}
+
+[type=button][layout=default]:before,[type=submit][layout=default]:before {
+    background: black;
+    z-index: -1
+}
+
+[type=button][layout=default]:after,[type=submit][layout=default]:after {
+    background: #fff;
+    z-index: -2
+}
+
+[type=button][layout=default]:focus .svg,[type=button][layout=default]:hover .svg,[type=submit][layout=default]:focus .svg,[type=submit][layout=default]:hover .svg {
+    -webkit-transform: translate(5px);
+    -ms-transform: translate(5px);
+    transform: translate(5px)
+}
+
+[type=button][layout=default]:focus .svg svg,[type=button][layout=default]:hover .svg svg,[type=submit][layout=default]:focus .svg svg,[type=submit][layout=default]:hover .svg svg {
+    fill: #f0f
+}
+
+[type=button][layout=default]:focus .caption,[type=button][layout=default]:hover .caption,[type=submit][layout=default]:focus .caption,[type=submit][layout=default]:hover .caption {
+    -webkit-animation: glitch .3s cubic-bezier(.25,.46,.45,.94) both;
+    animation: glitch .3s cubic-bezier(.25,.46,.45,.94) both
+}
+
+[type=button][layout=default]:focus:before,[type=button][layout=default]:hover:before,[type=submit][layout=default]:focus:before,[type=submit][layout=default]:hover:before {
+    -webkit-animation: glitch .3s cubic-bezier(.25,.46,.45,.94) both infinite;
+    animation: glitch .3s cubic-bezier(.25,.46,.45,.94) both infinite
+}
+
+[type=button][layout=default]:focus:after,[type=button][layout=default]:hover:after,[type=submit][layout=default]:focus:after,[type=submit][layout=default]:hover:after {
+    -webkit-animation: glitch .3s cubic-bezier(.25,.46,.45,.94) reverse both infinite;
+    animation: glitch .3s cubic-bezier(.25,.46,.45,.94) reverse both infinite
+}
+
+[type=button][layout=default][theme=blue],[type=submit][layout=default][theme=blue] {
+    color: #fff
+}
+
+[type=button][layout=default][theme=blue] .caption,[type=submit][layout=default][theme=blue] .caption {
+    background: #fff
+}
+
+[type=button][layout=default][theme=blue] .svg svg,[type=submit][layout=default][theme=blue] .svg svg {
+    fill: #fff
+}
+
+[type=button][layout=default]:focus .caption,[type=button][layout=default]:hover .caption,[type=submit][layout=default]:focus .caption,[type=submit][layout=default]:hover .caption {
+    -webkit-animation: glitch .3s cubic-bezier(.25,.46,.45,.94) both;
+    animation: glitch .3s cubic-bezier(.25,.46,.45,.94) both
+}
+
+[type=button][layout=default]:focus:before,[type=button][layout=default]:hover:before,[type=submit][layout=default]:focus:before,[type=submit][layout=default]:hover:before {
+    -webkit-animation: glitch .3s cubic-bezier(.25,.46,.45,.94) both infinite;
+    animation: glitch .3s cubic-bezier(.25,.46,.45,.94) both infinite
+}
+
+[type=button][layout=default]:focus:after,[type=button][layout=default]:hover:after,[type=submit][layout=default]:focus:after,[type=submit][layout=default]:hover:after {
+    -webkit-animation: glitch .3s cubic-bezier(.25,.46,.45,.94) reverse both infinite;
+    animation: glitch .3s cubic-bezier(.25,.46,.45,.94) reverse both infinite
+}
+@keyframes glitch {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+
+    20% {
+        -webkit-transform: translate(-2px,2px);
+        transform: translate(-2px,2px)
+    }
+
+    40% {
+        -webkit-transform: translate(-2px,-2px);
+        transform: translate(-2px,-2px)
+    }
+
+    60% {
+        -webkit-transform: translate(2px,2px);
+        transform: translate(2px,2px)
+    }
+
+    80% {
+        -webkit-transform: translate(2px,-2px);
+        transform: translate(2px,-2px)
+    }
+
+    to {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+}
+
+
+
+.wave {
+font-size: 80px;
+color: #0e708c;
+-webkit-box-reflect: 
+below -20px
+linear-gradient(transparent, rgba(0,0,0,0,2));
+}
+.wave span {
+display: inline-block;
+animation: wave-anim 1s infinite;
+animation-delay: calc(0.1s * var(--item));
+}
+
+@kerframes wave-anim {
+0%,
+40%,
+100% {
+transform :translateY(0);
+}
+20% {
+transform :translateY(-20px);
+}
+}
+
